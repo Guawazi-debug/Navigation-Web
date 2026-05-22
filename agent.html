@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全栈项目智能开发多Agent协作系统</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#0F172A',
+                        accent: '#10B981',
+                        dark: '#0D1117'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .gradient-text {
+                @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+            }
+            .card-hover {
+                @apply transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary/20;
+            }
+            .flow-line {
+                @apply h-0.5 bg-gradient-to-r from-primary to-accent animate-pulse;
+            }
+        }
+    </style>
+</head>
+<body class="bg-dark text-gray-100 font-inter min-h-screen">
+    <!-- 顶部背景 -->
+    <div class="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-primary/10 to-transparent -z-10"></div>
+    
+    <div class="container mx-auto px-4 py-12 max-w-6xl">
+        <!-- 标题区域 -->
+        <div class="text-center mb-16">
+            <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold gradient-text mb-6">
+                全栈项目智能开发多Agent协作系统
+            </h1>
+            <p class="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
+                依托AI智能体驱动完成Vue+SpringBoot前后端项目全流程开发、代码调试、架构优化与运维配置全链路落地
+            </p>
+        </div>
+
+        <!-- 核心痛点 -->
+        <div class="mb-16 bg-secondary/50 rounded-2xl p-8 border border-gray-700">
+            <h2 class="text-2xl font-bold mb-4 flex items-center">
+                <i class="fa fa-exclamation-circle text-red-400 mr-3"></i>项目解决的核心痛点
+            </h2>
+            <ul class="space-y-3 text-gray-300">
+                <li class="flex items-start">
+                    <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                    <span>传统全栈开发需求拆解繁琐、前后端联调耗时长、沟通成本高</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                    <span>Nginx反向代理/Vite工程化配置易出错，线上环境故障频发</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                    <span>存量代码技术债累积、整改低效，人工排查难度大</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                    <span>复杂业务逻辑梳理困难，单轮大模型无法完成完整方案输出</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fa fa-angle-right text-primary mt-1 mr-2"></i>
+                    <span>单人开发周期长、重复工作量大、研发效率低下</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 四大Agent模块 -->
+        <h2 class="text-2xl font-bold mb-8 text-center">
+            <i class="fa fa-robot text-primary mr-3"></i>四大智能Agent · 分工协作体系
+        </h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            <!-- 规划Agent -->
+            <div class="bg-secondary rounded-xl p-6 border border-gray-700 card-hover">
+                <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mb-4">
+                    <i class="fa fa-map text-primary text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">规划 Agent</h3>
+                <p class="text-gray-400 text-sm">需求拆解、业务流程长链推理，逐层拆分模块任务，制定开发计划</p>
+            </div>
+            
+            <!-- 编码Agent -->
+            <div class="bg-secondary rounded-xl p-6 border border-gray-700 card-hover">
+                <div class="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mb-4">
+                    <i class="fa fa-code text-accent text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">编码 Agent</h3>
+                <p class="text-gray-400 text-sm">前后端并行生成业务代码、接口文档，自动化构建项目工程结构</p>
+            </div>
+            
+            <!-- 调试验证Agent -->
+            <div class="bg-secondary rounded-xl p-6 border border-gray-700 card-hover">
+                <div class="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center mb-4">
+                    <i class="fa fa-bug text-yellow-500 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">调试验证 Agent</h3>
+                <p class="text-gray-400 text-sm">自动检测语法漏洞、跨域路由异常，智能生成修复方案</p>
+            </div>
+            
+            <!-- 运维配置Agent -->
+            <div class="bg-secondary rounded-xl p-6 border border-gray-700 card-hover">
+                <div class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center mb-4">
+                    <i class="fa fa-server text-purple-500 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">运维配置 Agent</h3>
+                <p class="text-gray-400 text-sm">一键生成Nginx配置、宝塔部署脚本，完成部署闭环校验</p>
+            </div>
+        </div>
+
+        <!-- 核心逻辑流 -->
+        <div class="mb-16">
+            <h2 class="text-2xl font-bold mb-8 text-center">
+                <i class="fa fa-sitemap text-primary mr-3"></i>核心逻辑流 · 长链推理闭环
+            </h2>
+            
+            <div class="flex flex-col items-center">
+                <!-- 流程步骤 -->
+                <div class="w-full max-w-4xl">
+                    <div class="flex flex-col md:flex-row items-center justify-between">
+                        <div class="text-center mb-6 md:mb-0 w-full md:w-1/5">
+                            <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center mx-auto mb-3">
+                                <i class="fa fa-list text-white text-2xl"></i>
+                            </div>
+                            <p class="font-medium">需求拆解</p>
+                        </div>
+                        
+                        <div class="flow-line w-12 md:w-16"></div>
+                        
+                        <div class="text-center mb-6 md:mb-0 w-full md:w-1/5">
+                            <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center mx-auto mb-3">
+                                <i class="fa fa-code text-white text-2xl"></i>
+                            </div>
+                            <p class="font-medium">代码生成</p>
+                        </div>
+                        
+                        <div class="flow-line w-12 md:w-16"></div>
+                        
+                        <div class="text-center mb-6 md:mb-0 w-full md:w-1/5">
+                            <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center mx-auto mb-3">
+                                <i class="fa fa-wrench text-white text-2xl"></i>
+                            </div>
+                            <p class="font-medium">联调排错</p>
+                        </div>
+                        
+                        <div class="flow-line w-12 md:w-16"></div>
+                        
+                        <div class="text-center mb-6 md:mb-0 w-full md:w-1/5">
+                            <div class="w-16 h-16 rounded-full bg-primary flex items-center justify-center mx-auto mb-3">
+                                <i class="fa fa-rocket text-white text-2xl"></i>
+                            </div>
+                            <p class="font-medium">部署配置</p>
+                        </div>
+                        
+                        <div class="flow-line w-12 md:w-16"></div>
+                        
+                        <div class="text-center mb-6 md:mb-0 w-full md:w-1/5">
+                            <div class="w-16 h-16 rounded-full bg-accent flex items-center justify-center mx-auto mb-3">
+                                <i class="fa fa-refresh text-white text-2xl"></i>
+                            </div>
+                            <p class="font-medium">迭代优化</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 项目成果 -->
+        <div class="bg-gradient-to-r from-primary/20 to-secondary rounded-2xl p-8 border border-primary/30">
+            <h2 class="text-2xl font-bold mb-4 flex items-center">
+                <i class="fa fa-trophy text-yellow-400 mr-3"></i>项目落地成果
+            </h2>
+            <div class="space-y-4 text-gray-300">
+                <p>• 系统采用<span class="text-primary font-bold">多Agent分工协作+长链推理</span>架构，各智能体之间任务接力、结果互审</p>
+                <p>• 已常态化用于个人全栈项目研发，<span class="text-accent font-bold">日均稳定消耗约1亿Token</span></p>
+                <p>• 将全栈项目从需求到上线的开发效率提升<span class="text-accent font-bold">75%以上</span></p>
+                <p>• 大幅降低重复编码与配置排障成本，实现智能化全流程开发</p>
+                <p>• 支持Vue+SpringBoot全栈技术栈，覆盖开发、调试、部署、优化全生命周期</p>
+            </div>
+        </div>
+        
+        <!-- 底部 -->
+        <div class="mt-12 text-center text-gray-500 text-sm">
+            <p>基于小米MIMO大模型 · 全栈智能开发多Agent协作系统演示界面</p>
+        </div>
+    </div>
+</body>
+</html>

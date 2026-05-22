@@ -1,0 +1,28 @@
+# 瓜娃子导航 - robots.txt
+# 更新日志：2026-03-01 - 初始创建
+
+User-agent: *
+Allow: /
+
+# 允许访问主要目录
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /uploads/
+
+# 禁止访问后台管理目录
+Disallow: /admin/
+
+# 禁止访问配置文件
+Disallow: /config.php
+
+# 禁止访问敏感文件
+Disallow: /.user.ini
+Disallow: /.well-known/
+
+# 站点地图位置
+Sitemap: https://awenz.cn/sitemap.xml
+Sitemap: https://awenz.cn/sitemap.php
+
+# 爬取延迟（可选，建议不设置或设置较大值）
+# Crawl-delay: 1
